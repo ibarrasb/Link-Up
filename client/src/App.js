@@ -10,9 +10,6 @@ function App() {
     <DataProvider>
       <Router>
         <div className="App">
-        <div className='ai'>
-                <img src={LinkUp} alt='' className='linkuplogo' width='200px'/>
-              </div>
         <Header/>
         <MainPages/>
         </div>

@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import './login.css'
+import LinkUp from '../../../img/linkup.svg'
 
 function Login() {
     const [user, setUser] = useState({
@@ -20,13 +21,17 @@ function Login() {
 
             localStorage.setItem('firstLogin', true)
             
-            window.location.href = "/";
+            window.location.href = "/home";
         } catch (err) {
             alert(err.response.data.msg)
         }
     }
 
     return (
+        <div>
+            <div className='svg-container'>
+                <img src={LinkUp} alt='' className='linkuplogo' width='200px'/>
+              </div>
         <div className="login-page">
             <form onSubmit={loginSubmit}>
                 <h2>Login</h2>
@@ -41,6 +46,7 @@ function Login() {
                     <Link to="/register">Register</Link>
                 </div>
             </form>
+        </div>
         </div>
     )
 }

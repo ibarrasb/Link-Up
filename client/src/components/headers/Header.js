@@ -36,17 +36,15 @@ function Header() {
 
         <div className='logo'>
             <h1>
-                    <Link to="/">{isAdmin ? 'Admin' : 'Link Up Home'}</Link>
+                    <Link to="/">{isAdmin ? 'Admin' : ''}</Link>
             </h1>
         </div>
 
         <ul>
-            <li><Link to="/">{isAdmin ? 'Admin' : 'Home'}</Link></li>
-
             {isAdmin && adminRouter()}
             
             {
-                isLogged ? loggedRouter() :  <li><Link to="/login">Login</Link></li>
+                isLogged ? loggedRouter() :  ''
             } 
 
         </ul>   

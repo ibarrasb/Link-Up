@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
+import LinkUp from '../../../img/linkup.svg'
 
 function Register() {
     const [user, setUser] = useState({
@@ -20,13 +21,17 @@ function Register() {
             localStorage.setItem('firstLogin', true)
 
             
-            window.location.href = "/";
+            window.location.href = "/home";
         } catch (err) {
             alert(err.response.data.msg)
         }
     }
 
     return (
+        <div>
+            <div className='svg-container'>
+                <img src={LinkUp} alt='' className='linkuplogo' width='200px'/>
+              </div>
         <div className="login-page">
             <form onSubmit={registerSubmit}>
                 <h2>Register</h2>
@@ -41,9 +46,10 @@ function Register() {
 
                 <div className="row">
                     <button type="submit">Register</button>
-                    <Link to="/login">Login</Link>
+                    <Link to="/">Login</Link>
                 </div>
             </form>
+        </div>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 .login-page{
     max-width: 500px;
-    border: 2px solid rgb(3, 165, 206);
+    border: 2px solid #FEF5ED;
     border-radius: 5px;
     padding: 30px;
     margin: 50px auto;
@@ -10,14 +10,25 @@
     letter-spacing: 2px;
     color: #555;
 }
+.svg-container{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-top: 50px;
+}
+.linkuplogo{
+    display: block;
+}
 .login-page form input,
 .login-page form button{
     width: 100%;
     height: 40px;
     margin: 10px 0;
     padding: 0 5px;
-    outline: rgb(3, 165, 206);
-    border: 1px solid rgb(3, 165, 206);
+    outline: #EEEEEE;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
 }
 .login-page form .row{
     display: flex;
@@ -26,13 +37,14 @@
 }
 .login-page form button{
     width: 150px;
-    background: rgb(3, 165, 206);
+    background: #537188;
     color: white;
     text-transform: uppercase;
     letter-spacing: 2px;
+    border-radius: 5px;
 }
 .login-page form a{
-    color: orange;
+    color: black;
     letter-spacing: 1.3px;
     text-transform: uppercase;
 }
